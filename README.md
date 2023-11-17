@@ -40,7 +40,7 @@ npx playwright show-report
 ## Parallelism and browsers:
 
 - Currently, multi-browser support is disabled, and only the Chromium is in use. To enable other browsers, uncomment the
-  lines under the `  projects: [` property in the `playwright.config.ts` file (from here: 'config file') and run:
+  lines under the `  projects: [` property in the `playwright.config.ts` file and run:
 
 ```
 npx playwright install
