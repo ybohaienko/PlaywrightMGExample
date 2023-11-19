@@ -9,10 +9,10 @@
 
 ## Use:
 
-- to setup project:
+- to setup project run the nex two commands:
 
 ```
-npm run install
+npm install && npm run setups
 ```
 
 - to run GUI tests:
