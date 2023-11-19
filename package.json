@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "install": "npm install && npx playwright install chromium",
-    "browser": "npx playwright install",
     "test": "npx playwright test",
     "uninstall": "npx playwright uninstall",
-    "report": "npx playwright show-report"
+    "report": "npx playwright show-report",
+    "browsers": "npx playwright install"
   },
   "keywords": [],
   "author": "",

@@ -12,19 +12,19 @@
 - to setup project:
 
 ```
-npm install && npx playwright install chromium
+npm run install
 ```
 
 - to run GUI tests:
 
 ```
-npx playwright test
+npm run test
 ```
 
 - to remove installed browser(s), run:
 
 ```
-npx playwright unnstall
+npx run uninstall
 ```
 
 ## Reporting:
@@ -34,7 +34,7 @@ npx playwright unnstall
 - To manually open the test report execute the following commend:
 
 ```
-npx playwright show-report
+npm run report
 ```
 
 ## Parallelism and browsers:
@@ -43,7 +43,7 @@ npx playwright show-report
   lines under the `  projects: [` property in the `playwright.config.ts` file and run:
 
 ```
-npx playwright install
+npm run browsers
 ```
 
 - Chromium run executes in **heedful** mode. To enable **headless** mode, change the `headless:` property for the
