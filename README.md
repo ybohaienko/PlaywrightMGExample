@@ -9,19 +9,19 @@
 
 ## Use:
 
-- to setup project run the nex two commands:
+- to setup project, execute:
 
 ```
 npm install && npm run setup
 ```
 
-- to run GUI tests:
+- to trigger GUI tests, execute:
 
 ```
 npm run test
 ```
 
-- to remove installed browser(s), run:
+- to remove installed browser(s), execute:
 
 ```
 npx run uninstall
@@ -31,7 +31,7 @@ npx run uninstall
 
 - Reports are automatically created in `<PROJECT_ROOT>/playwright-report` directory;
 - The report opens automatically in case of test execution fail.
-- To manually open the test report execute the following commend:
+- To manually open the test report execute the following command:
 
 ```
 npm run report
