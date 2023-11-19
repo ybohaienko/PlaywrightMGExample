@@ -12,7 +12,7 @@
 - to setup project run the nex two commands:
 
 ```
-npm install && npm run setups
+npm install && npm run setup
 ```
 
 - to run GUI tests:
