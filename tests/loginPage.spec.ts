@@ -33,15 +33,15 @@ test.describe.parallel('Login page testing', () => {
         });
 
         test("Check submit form valid credentials pass", async () => {
-            //implementation is omitted
+            test.skip(true, "implementation is omitted");
         });
 
         test("Check submit form invalid email fail", async () => {
-            //implementation is omitted
+            test.skip(true, "implementation is omitted");
         });
 
         test("Check submit form invalid password fail", async () => {
-            //implementation is omitted
+            test.skip(true, "implementation is omitted");
         });
 
         test("Check submit form empty inputs fail", async () => {
@@ -63,34 +63,32 @@ test.describe.parallel('Login page testing', () => {
         });
 
         test("Check submit form inputs unsupported characters/spaces fail", async () => {
-            //implementation is omitted
+            test.skip(true, "implementation is omitted");
         });
 
         test("Check submit form inputs length fail", async () => {
-            //implementation is omitted
+            test.skip(true, "implementation is omitted");
         });
 
         test("Check submit form invalid inputs excess tries (CAPTCHA verification) fail", async () => {
-            //implementation is omitted
+            test.skip(true, "implementation is omitted");
         });
 
         test("Check submit form valid credentials while account lockout/deactivation/password expiration fail",
             async () => {
-                //implementation is omitted
+                test.skip(true, "implementation is omitted");
             });
 
         test("Check the browser's Back button/reload session continuation pass", async () => {
-            /*
-                other session checks are possible, if the session handling is trickier;
-                implementation is omitted
-            */
+            test.skip(true, "implementation is omitted");
+            // other session checks are possible, if the session handling is trickier;
         });
 
         test("Check submit form inputs with injections fail", async () => {
+            test.skip(true, "implementation is omitted");
             /*
                 the case makes sense when login form is custom;
                 other security checks are possible, like checking the credentials encryption while request or cookies;
-                implementation is omitted
             */
         });
 
