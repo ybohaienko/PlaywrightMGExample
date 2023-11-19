@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "install": "npm install && npx playwright install chromium",
+    "browser": "npx playwright install",
+    "test": "npx playwright test",
+    "uninstall": "npx playwright uninstall",
+    "report": "npx playwright show-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
