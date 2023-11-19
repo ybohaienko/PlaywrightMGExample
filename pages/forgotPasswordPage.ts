@@ -11,7 +11,7 @@ export class ForgotPasswordPage {
         this.heading = page.getByText('Forgot your password?');
     }
 
-    async pageIsVisible() {
+    async pageIsVisible(): Promise<void> {
         expect(this.page.url()).toEqual(this.url);
         await expect (this.heading).toBeVisible();
     }

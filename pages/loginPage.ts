@@ -19,16 +19,16 @@ export class LoginPage {
         this.errorMessage = page.locator('div.error');
     }
 
-    async goto() {
+    async goto(): Promise<void> {
         await this.page.goto(this.url);
     }
 
-    async checkLoginButtonTextContains(message: string) {
+    async checkLoginButtonTextContains(message: string): Promise<void> {
         await expect(this.buttonLogIn).toBeVisible();
         expect(await this.buttonLogIn.innerText()).toContain(message);
     }
 
-    async fillAndSubmitLoginForm(login?: string, password?: string) {
+    async fillAndSubmitLoginForm(login?: string, password?: string): Promise<void> {
         if (login) {
             await this.inputEmail.fill(login)
         }
@@ -40,12 +40,12 @@ export class LoginPage {
         await this.buttonLogIn.click();
     }
 
-    async checkErrorMessageEquals(message: string) {
+    async checkErrorMessageEquals(message: string): Promise<void> {
         await expect(this.errorMessage).toBeVisible();
         expect(await this.errorMessage.innerText()).toEqual(message);
     }
 
-    async fillAndSubmitLoginFormMail(message: string, login?: string, password?: string) {
+    async fillAndSubmitLoginFormMail(message: string, login?: string, password?: string): Promise<void> {
         await this.fillAndSubmitLoginForm(login, password);
         await this.checkErrorMessageEquals(message)
     }

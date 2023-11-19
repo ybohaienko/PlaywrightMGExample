@@ -96,7 +96,7 @@ test.describe.parallel('Login page testing', () => {
 
         /*
             More cases are possible to cover extended functionality like username (email) change if there is one.
-         */
+        */
     });
 
     test('Check the Forgot Password link functionality pass', async () => {

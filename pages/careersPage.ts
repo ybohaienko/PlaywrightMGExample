@@ -22,7 +22,6 @@ export class CareersPage {
         this.headingOpenPositions = page.locator('h3 #open-positions');
         this.careersBlock = page.locator('#faq');
         this.tabPositionType = this.careersBlock.getByRole('listitem');
-
         this.listItemPosition = page.locator('[class*="js-module"]');
         this.listItemPositionElements = {
             name: this.listItemPosition.getByRole('link'),
@@ -32,36 +31,36 @@ export class CareersPage {
         }
     }
 
-    async goto() {
+    async goto(): Promise<void> {
         await this.page.goto(this.url);
     }
 
-    async checkElementsByLocatorContainTexts(locator: Locator, ...texts: string[]) {
+    async checkElementsByLocatorContainTexts(locator: Locator, ...texts: string[]): Promise<void> {
         for (const elementInnerText of await locator.allInnerTexts()) {
             expect(texts.includes(elementInnerText));
         }
     }
 
-    async checkElementsInViewport(...elements: Locator[]) {
+    async checkElementsInViewport(...elements: Locator[]): Promise<void> {
         for (const element of elements) {
             await expect(element).toBeInViewport();
         }
     }
 
-    async checkElementsNotInViewport(...elements: Locator[]) {
+    async checkElementsNotInViewport(...elements: Locator[]): Promise<void> {
         for (const element of elements) {
             await expect(element).not.toBeInViewport();
         }
     }
 
-    async checkPositionsInViewport(...positionSummaries: string[]) {
+    async checkPositionsInViewport(...positionSummaries: string[]): Promise<void> {
         for (const positionSummary of positionSummaries) {
             await this.checkElementsInViewport(
                 this.listItemPositionElements.name.getByText(positionSummary))
         }
     }
 
-    async checkPositionsNotInViewport(...positionSummaries: string[]) {
+    async checkPositionsNotInViewport(...positionSummaries: string[]): Promise<void> {
         for (const positionSummary of positionSummaries) {
             await this.checkElementsNotInViewport(
                 this.listItemPositionElements.name.getByText(positionSummary))

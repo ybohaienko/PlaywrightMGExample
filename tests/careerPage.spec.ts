@@ -79,8 +79,3 @@ test.describe.parallel('Career page testing', () => {
         });
     });
 })
-
-
-
-
-
